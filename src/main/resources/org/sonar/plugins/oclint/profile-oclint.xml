@@ -3,14 +3,7 @@
   <name>OCLint</name>
   <language>objc</language>
   <rules>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>use early exits and continue</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>avoid branching statement as last in loop</key>
-    </rule>
+    <!-- Basic -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
       <key>bitwise operator in conditional</key>
@@ -41,20 +34,128 @@
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>high cyclomatic complexity</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
       <key>dead code</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>default label not last in switch statement</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
       <key>double negative</key>
     </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>for loop should be while loop</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>goto statement</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>jumbled incrementer</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>misplaced null check</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>misplaced nil check</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>multiple unary operator</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>return from finally block</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>throw exception from finally block</key>
+    </rule>
+    <!-- Cocoa -->
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>missing hash method</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>missing call to base method</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>calling prohibited method</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>calling protected method</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>missing abstract method implementation</key>
+    </rule>
+    <!-- Convention -->
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>avoid branching statement as last in loop</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>base class destructor should be virtual or protected</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>unnecessary default statement in covered switch statement</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>ill-placed default label in switch statement</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>destructor of virtual class</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>inverted logic</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>missing break in switch statement</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>non case label in switch statement</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>ivar assignment outside accessors or init</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>parameter reassignment</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>prefer early exits and continue</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>missing default in switch statements</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>too few branches in switch statement</key>
+    </rule>
+    <!-- Design -->
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>avoid default arguments on virtual methods</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>avoid private static members</key>
+    </rule>
+    <!-- Empty -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
       <key>empty catch statement</key>
@@ -91,94 +192,33 @@
       <repositoryKey>OCLint</repositoryKey>
       <key>empty while statement</key>
     </rule>
+    <!-- Migration -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>feature envy</key>
+      <key>use boxed expression</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>for loop should be while loop</key>
+      <key>use container literal</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>goto statement</key>
+      <key>use number literal</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>inverted logic</key>
+      <key>use object subscripting</key>
     </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>jumbled incrementer</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>long class</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>long line</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>long method</key>
-    </rule>
+    <!-- Naming -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
       <key>long variable name</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>misplaced null check</key>
+      <key>short variable name</key>
     </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>misplaced nil check</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>missing break in switch statement</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>multiple unary operator</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>high ncss method</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>deep nested block</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>non case label in switch statement</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>high npath complexity</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>replace with boxed expression</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>replace with container literal</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>replace with number literal</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>replace with object subscripting</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>parameter reassignment</key>
-    </rule>
+    <!-- Redundant -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
       <key>redundant conditional operator</key>
@@ -197,27 +237,44 @@
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>return from finally block</key>
+      <key>unnecessary else statement</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>short variable name</key>
+      <key>unnecessary null check for dealloc</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>switch statements don't need default when fully covered</key>
+      <key>useless parentheses</key>
+    </rule>
+    <!-- Size -->
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>high cyclomatic complexity</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>switch statements should have default</key>
+      <key>long class</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>throw exception from finally block</key>
+      <key>long line</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>too few branches in switch statement</key>
+      <key>long method</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>high ncss method</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>deep nested block</key>
+    </rule>
+    <rule>
+      <repositoryKey>OCLint</repositoryKey>
+      <key>high npath complexity</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
@@ -231,10 +288,7 @@
       <repositoryKey>OCLint</repositoryKey>
       <key>too many parameters</key>
     </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>unnecessary else statement</key>
-    </rule>
+    <!-- Unused -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
       <key>unused local variable</key>
@@ -243,73 +297,14 @@
       <repositoryKey>OCLint</repositoryKey>
       <key>unused method parameter</key>
     </rule>
+    <!-- Compiler -->
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>useless parentheses</key>
+      <key>compiler warning</key>
     </rule>
     <rule>
       <repositoryKey>OCLint</repositoryKey>
-      <key>ivar assignment outside accessors or init</key>
+      <key>compiler error</key>
     </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>covered switch statements dont need default</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>class</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>unnecessary null check for dealloc</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>unnecessary default statement in covered switch statement</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>ill-placed default label in switch statement</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>prefer early exits and continue</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>missing default in switch statements</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>use object subscripting</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>use boxed expression</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>use container literal</key>
-    </rule>
-    <rule>
-      <repositoryKey>OCLint</repositoryKey>
-      <key>use number literal</key>
-    </rule>
-	<rule>
-		<repositoryKey>OCLint</repositoryKey>
-		<key>missing hash method</key>
-	</rule>
-	<rule>
-		<repositoryKey>OCLint</repositoryKey>
-		<key>missing call to base method</key>
-	</rule>
-	<rule>
-		<repositoryKey>OCLint</repositoryKey>
-		<key>calling prohibited method</key>
-	</rule>
-	<rule>
-		<repositoryKey>OCLint</repositoryKey>
-		<key>missing abstract method implementation</key>
-	</rule>
   </rules>
 </profile>

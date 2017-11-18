@@ -3,18 +3,11 @@ Available issues:
 OCLint
 ======
 
-avoid branching statement as last in loop
-----------
-
-Summary: Name: avoid branching statement as last in loop
-
-Severity: 2
-Category: OCLint
-
 bitwise operator in conditional
 ----------
 
-Summary: Name: bitwise operator in conditional
+Summary: Checks for bitwise operations in conditionals. Although being written on purpose in some rare cases, bitwise operations are considered to be too “smart”. Smart code is not easy to understand.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#bitwiseoperatorinconditional
 
 Severity: 3
 Category: OCLint
@@ -22,7 +15,8 @@ Category: OCLint
 broken null check
 ----------
 
-Summary: Name: broken null check
+Summary: The broken null check itself will crash the program.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#brokennullcheck
 
 Severity: 3
 Category: OCLint
@@ -30,7 +24,8 @@ Category: OCLint
 broken nil check
 ----------
 
-Summary: 
+Summary: The broken nil check in Objective-C in some cases returns just the opposite result.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#brokennilcheck
 
 Severity: 4
 Category: OCLint
@@ -38,7 +33,8 @@ Category: OCLint
 broken oddness check
 ----------
 
-Summary: Name: broken oddness check
+Summary: Checking oddness by x % 2 == 1 won’t work for negative numbers. Use x & 1 == 1, or x % 2 != 0 instead.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#brokenoddnesscheck
 
 Severity: 3
 Category: OCLint
@@ -46,7 +42,8 @@ Category: OCLint
 collapsible if statements
 ----------
 
-Summary: Name: collapsible if statements
+Summary: This rule detects instances where the conditions of two consecutive if statements can be combined into one in order to increase code cleanness and readability.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#collapsibleifstatements
 
 Severity: 3
 Category: OCLint
@@ -54,7 +51,8 @@ Category: OCLint
 constant conditional operator
 ----------
 
-Summary: Name: constant conditional operator
+Summary: conditional operator whose conditionals are always true or always false are confusing.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#constantconditionaloperator
 
 Severity: 3
 Category: OCLint
@@ -62,23 +60,17 @@ Category: OCLint
 constant if expression
 ----------
 
-Summary: Name: constant if expression
+Summary: if statements whose conditionals are always true or always false are confusing.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#constantifexpression
 
 Severity: 3
-Category: OCLint
-
-high cyclomatic complexity
-----------
-
-Summary: 
-
-Severity: 2
 Category: OCLint
 
 dead code
 ----------
 
-Summary: Name: dead code
+Summary: Code after return, break, continue, and throw statements is unreachable and will never be executed.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#deadcode
 
 Severity: 3
 Category: OCLint
@@ -86,87 +78,8 @@ Category: OCLint
 double negative
 ----------
 
-Summary: Name: double negative
-
-Severity: 3
-Category: OCLint
-
-empty catch statement
-----------
-
-Summary: Name: empty catch statement
-
-Severity: 3
-Category: OCLint
-
-empty do/while statement
-----------
-
-Summary: Name: empty do/while statement
-
-Severity: 3
-Category: OCLint
-
-empty else block
-----------
-
-Summary: Name: empty else block
-
-Severity: 3
-Category: OCLint
-
-empty finally statement
-----------
-
-Summary: Name: empty finally statement
-
-Severity: 3
-Category: OCLint
-
-empty for statement
-----------
-
-Summary: Name: empty for statement
-
-Severity: 3
-Category: OCLint
-
-empty if statement
-----------
-
-Summary: Name: empty if statement
-
-Severity: 3
-Category: OCLint
-
-empty switch statement
-----------
-
-Summary: Name: empty switch statement
-
-Severity: 3
-Category: OCLint
-
-empty try statement
-----------
-
-Summary: Name: empty try statement
-
-Severity: 3
-Category: OCLint
-
-empty while statement
-----------
-
-Summary: 
-
-Severity: 3
-Category: OCLint
-
-feature envy
-----------
-
-Summary: 
+Summary: There is no point in using a double negative, it is always positive.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#doublenegative
 
 Severity: 3
 Category: OCLint
@@ -174,7 +87,8 @@ Category: OCLint
 for loop should be while loop
 ----------
 
-Summary: Name: for loop should be while loop
+Summary: Under certain circumstances, some for loops can be simplified to while loops to make code more concise.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#forloopshouldbewhileloop
 
 Severity: 3
 Category: OCLint
@@ -182,63 +96,26 @@ Category: OCLint
 goto statement
 ----------
 
-Summary: 
+Summary: Go To Statement Considered Harmful
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#gotostatement
 
 Severity: 3
-Category: OCLint
-
-inverted logic
-----------
-
-Summary: Name: inverted logic
-
-Severity: 2
 Category: OCLint
 
 jumbled incrementer
 ----------
 
-Summary: Name: jumbled incrementer
+Summary: Jumbled incrementers are usually typos. If it’s done on purpose, it’s very confusing for code readers.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#jumbledincrementer
 
 Severity: 3
-Category: OCLint
-
-long class
-----------
-
-Summary: Name: long class
-
-Severity: 3
-Category: OCLint
-
-long line
-----------
-
-Summary: Name: long line
-
-Severity: 3
-Category: OCLint
-
-long method
-----------
-
-Summary: Name: long method
-
-Severity: 3
-Category: OCLint
-
-long variable name
-----------
-
-Summary: Name: long variable name
-
-Severity: 2
 Category: OCLint
 
 misplaced null check
 ----------
 
-Summary: Name: misplaced null check
+Summary: The null check is misplaced. In C and C++, sending a message to a null pointer could crash the program. When null is misplaced, either the check is useless or it’s incorrect.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#misplacednullcheck
 
 Severity: 3
 Category: OCLint
@@ -246,127 +123,26 @@ Category: OCLint
 misplaced nil check
 ----------
 
-Summary: 
+Summary: The nil check is misplaced. In Objective-C, sending a message to a nil pointer simply does nothing. But code readers may be confused about the misplaced nil check.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#misplacednilcheck
 
 Severity: 4
-Category: OCLint
-
-missing break in switch statement
-----------
-
-Summary: Name: missing break in switch statement
-
-Severity: 2
 Category: OCLint
 
 multiple unary operator
 ----------
 
-Summary: Name: multiple unary operator
+Summary: Multiple unary operator can always be confusing and should be simplified.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#multipleunaryoperator
 
 Severity: 3
-Category: OCLint
-
-must override hash with isEqual
-----------
-
-Summary: 
-
-Severity: 1
-Category: OCLint
-
-high ncss method
-----------
-
-Summary: Name: high ncss method
-
-Severity: 3
-Category: OCLint
-
-deep nested block
-----------
-
-Summary: Name: deep nested block
-
-Severity: 3
-Category: OCLint
-
-non case label in switch statement
-----------
-
-Summary: Name: non case label in switch statement
-
-Severity: 2
-Category: OCLint
-
-high npath complexity
-----------
-
-Summary: 
-
-Severity: 2
-Category: OCLint
-
-parameter reassignment
-----------
-
-Summary: Name: parameter reassignment
-
-Severity: 2
-Category: OCLint
-
-redundant conditional operator
-----------
-
-Summary: Name: redundant conditional operator
-
-Severity: 1
-Category: OCLint
-
-redundant if statement
-----------
-
-Summary: Name: redundant if statement
-
-Severity: 1
-Category: OCLint
-
-redundant local variable
-----------
-
-Summary: Name: redundant local variable
-
-Severity: 1
-Category: OCLint
-
-redundant nil check
-----------
-
-Summary: Name: redundant nil check
-
-Severity: 1
 Category: OCLint
 
 return from finally block
 ----------
 
-Summary: Name: return from finally block
-
-Severity: 3
-Category: OCLint
-
-short variable name
-----------
-
-Summary: 
-
-Severity: 2
-Category: OCLint
-
-switch statements don't need default when fully covered
-----------
-
-Summary: 
+Summary: Returning from a finally block is not recommended.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#returnfromfinallyblock
 
 Severity: 3
 Category: OCLint
@@ -374,103 +150,80 @@ Category: OCLint
 throw exception from finally block
 ----------
 
-Summary: 
+Summary: Throwing exceptions within a finally block may mask other exceptions or code defects.
+http://oclint-docs.readthedocs.io/en/stable/rules/basic.html#throwexceptionfromfinallyblock
 
 Severity: 3
 Category: OCLint
 
-too few branches in switch statement
+missing hash method
 ----------
 
-Summary: 
-
-Severity: 2
-Category: OCLint
-
-too many fields
-----------
-
-Summary: Name: too many fields
-
-Severity: 3
-Category: OCLint
-
-too many methods
-----------
-
-Summary: Name: too many methods
-
-Severity: 3
-Category: OCLint
-
-too many parameters
-----------
-
-Summary: 
-
-Severity: 3
-Category: OCLint
-
-unnecessary else statement
-----------
-
-Summary: Name: unnecessary else statement
+Summary: When isEqual method is overridden, hash method must be overridden, too.
+http://oclint-docs.readthedocs.io/en/stable/rules/cocoa.html#missinghashmethod
 
 Severity: 1
 Category: OCLint
 
-unused local variable
+missing call to base method
 ----------
 
-Summary: Name: unused local variable
-
-Severity: 0
-Category: OCLint
-
-unused method parameter
-----------
-
-Summary: 
-
-Severity: 0
-Category: OCLint
-
-useless parentheses
-----------
-
-Summary: 
+Summary: When a method is declared with __attribute__((annotate("oclint:enforce[base method]"))) annotation, all of its implementations (including its own and its sub classes) must call the method implementation in super class.
+http://oclint-docs.readthedocs.io/en/stable/rules/cocoa.html#missingcalltobasemethod
 
 Severity: 1
 Category: OCLint
 
-ivar assignment outside accessors or init
+calling prohibited method
 ----------
 
-Summary: Name: ivar assignment outside accessors or init
-
-Severity: 2
-Category: OCLint
-
-class
-----------
-
-Summary: Name: destructor of virtual class
-
-Severity: 2
-Category: OCLint
-
-unnecessary null check for dealloc
-----------
-
-Summary: Name: unnecessary null check for dealloc
+Summary: When a method is declared with __attribute__((annotate("oclint:enforce[prohibited method]"))) annotation, all of its usages will be prohibited.
+http://oclint-docs.readthedocs.io/en/stable/rules/cocoa.html#callingprohibitedmethod
 
 Severity: 1
+Category: OCLint
+
+calling protected method
+----------
+
+Summary: Even though there is no protected in Objective-C language level, in a design’s perspective, we sometimes hope to enforce a method only be used inside the class itself or by its subclass. This rule mimics the protected behavior, and alerts developers when a method is called outside its access scope.
+http://oclint-docs.readthedocs.io/en/stable/rules/cocoa.html#callingprotectedmethod
+
+Severity: 1
+Category: OCLint
+
+missing abstract method implementation
+----------
+
+Summary: Due to the Objective-C language tries to postpone the decision makings to the runtime as much as possible, an abstract method is okay to be declared but without implementations. This rule tries to verify the subclass implement the correct abstract method.
+http://oclint-docs.readthedocs.io/en/stable/rules/cocoa.html#missingabstractmethodimplementation
+
+Severity: 1
+Category: OCLint
+
+avoid branching statement as last in loop
+----------
+
+Summary: Having branching statement as the last statement inside a loop is very confusing, and could largely be forgetting of something and turning into a bug.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#avoidbranchingstatementaslastinloop
+
+Severity: 2
+Category: OCLint
+
+base class destructor should be virtual or protected
+----------
+
+Summary: Make base class destructor public and virtual, or protected and nonvirtual
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#problematicbaseclassdestructor
+
+Severity: 2
 Category: OCLint
 
 unnecessary default statement in covered switch statement
 ----------
 
 Summary: When a switch statement covers all possible cases, a default label is not needed and should be removed. If the switch is not fully covered, the SwitchStatementsShouldHaveDefault rule will report.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#unnecessarydefaultstatement
 
 Severity: 2
 Category: OCLint
@@ -479,6 +232,61 @@ ill-placed default label in switch statement
 ----------
 
 Summary: It is very confusing when default label is not the last label in a switch statement.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#misplaceddefaultlabel
+
+Severity: 2
+Category: OCLint
+
+destructor of virtual class
+----------
+
+Summary: This rule enforces the destructor of a virtual class must be virtual.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#destructorofvirtualclass
+
+Severity: 2
+Category: OCLint
+
+inverted logic
+----------
+
+Summary: An inverted logic is hard to understand.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#invertedlogic
+
+Severity: 2
+Category: OCLint
+
+missing break in switch statement
+----------
+
+Summary: A switch statement without a break statement has a very large chance to contribute a bug.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#missingbreakinswitchstatement
+
+Severity: 2
+Category: OCLint
+
+non case label in switch statement
+----------
+
+Summary: It is very confusing when label becomes part of the switch statement.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#noncaselabelinswitchstatement
+
+Severity: 2
+Category: OCLint
+
+ivar assignment outside accessors or init
+----------
+
+Summary: This rule prevents assigning an ivar outside of getters, setters, and init method.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#assignivaroutsideaccessors
+
+Severity: 2
+Category: OCLint
+
+parameter reassignment
+----------
+
+Summary: Reassigning values to parameters is very problematic in most cases.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#parameterreassignment
 
 Severity: 2
 Category: OCLint
@@ -487,22 +295,134 @@ prefer early exits and continue
 ----------
 
 Summary: Early exits can reduce the indentation of a block of code, so that reader do not have to remember all the previous decisions, therefore, makes it easier to understand the code.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#preferearlyexit
 
-Severity: 2
+Severity: 3
 Category: OCLint
 
 missing default in switch statements
 ----------
 
 Summary: Switch statements should have a default statement.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#missingdefaultstatement
 
 Severity: 2
+Category: OCLint
+
+too few branches in switch statement
+----------
+
+Summary: To increase code readability, when a switch consists of only a few branches, it’s much better to use an if statement instead.
+http://oclint-docs.readthedocs.io/en/stable/rules/convention.html#toofewbranchesinswitchstatement
+
+Severity: 2
+Category: OCLint
+
+avoid default arguments on virtual methods
+----------
+
+Summary: Giving virtual functions default argument initializers tends to defeat polymorphism and introduce unnecessary complexity into a class hierarchy.
+http://oclint-docs.readthedocs.io/en/stable/rules/design.html#avoiddefaultargumentsonvirtualmethods
+
+Severity: 3
+Category: OCLint
+
+avoid private static members
+----------
+
+Summary: Having static members is easier to harm encapsulation.
+http://oclint-docs.readthedocs.io/en/stable/rules/design.html#avoidprivatestaticmembers
+
+Severity: 3
+Category: OCLint
+
+
+empty catch statement
+----------
+
+Summary: This rule detects instances where an exception is caught, but nothing is done about it.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptycatchstatement
+
+Severity: 3
+Category: OCLint
+
+empty do/while statement
+----------
+
+Summary: This rule detects instances where do-while statement does nothing.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptydowhilestatement
+
+Severity: 3
+Category: OCLint
+
+empty else block
+----------
+
+Summary: This rule detects instances where a else statement does nothing.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptyelseblock
+
+Severity: 3
+Category: OCLint
+
+empty finally statement
+----------
+
+Summary: This rule detects instances where a finally statement does nothing.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptyfinallystatement
+
+Severity: 3
+Category: OCLint
+
+empty for statement
+----------
+
+Summary: This rule detects instances where a for statement does nothing.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptyforstatement
+
+Severity: 3
+Category: OCLint
+
+empty if statement
+----------
+
+Summary: This rule detects instances where a condition is checked, but nothing is done about it.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptyifstatement
+
+Severity: 3
+Category: OCLint
+
+empty switch statement
+----------
+
+Summary: This rule detects instances where a switch statement does nothing.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptyswitchstatement
+
+Severity: 3
+Category: OCLint
+
+empty try statement
+----------
+
+Summary: This rule detects instances where a try statement is empty.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptytrystatement
+
+Severity: 3
+Category: OCLint
+
+empty while statement
+----------
+
+Summary: This rule detects instances where a while statement does nothing.
+http://oclint-docs.readthedocs.io/en/stable/rules/empty.html#emptywhilestatement
+
+Severity: 3
 Category: OCLint
 
 use boxed expression
 ----------
 
 Summary: This rule locates the places that can be migrated to the new Objective-C literals with boxed expressions.
+http://oclint-docs.readthedocs.io/en/stable/rules/migration.html#useboxedexpression
 
 Severity: 1
 Category: OCLint
@@ -511,6 +431,7 @@ use container literal
 ----------
 
 Summary: This rule locates the places that can be migrated to the new Objective-C literals with container literals.
+http://oclint-docs.readthedocs.io/en/stable/rules/migration.html#usecontainerliteral
 
 Severity: 1
 Category: OCLint
@@ -519,6 +440,7 @@ use number literal
 ----------
 
 Summary: This rule locates the places that can be migrated to the new Objective-C literals with number literals.
+http://oclint-docs.readthedocs.io/en/stable/rules/migration.html#usenumberliteral
 
 Severity: 1
 Category: OCLint
@@ -526,41 +448,217 @@ Category: OCLint
 use object subscripting
 ----------
 
-Summary: Name: use object subscripting
+Summary: This rule locates the places that can be migrated to the new Objective-C literals with object subscripting.
+http://oclint-docs.readthedocs.io/en/stable/rules/migration.html#useobjectsubscripting
 
 Severity: 1
 Category: OCLint
 
-missing hash method
+long variable name
 ----------
 
-Summary: Name: missing hash method
+Summary: Variables with long names harm readability.
+http://oclint-docs.readthedocs.io/en/stable/rules/naming.html#longvariablename
 
-Severity: 1
+Severity: 2
 Category: OCLint
 
-missing call to base method
+short variable name
 ----------
 
-Summary: Name: missing call to base method
+Summary: A variable with a short name is hard to understand what it stands for. Variable with name, but the name has number of characters less than the threshold will be emitted.
+http://oclint-docs.readthedocs.io/en/stable/rules/naming.html#shortvariablename
 
-Severity: 1
+Severity: 2
 Category: OCLint
 
-calling prohibited method
+redundant conditional operator
 ----------
 
-Summary: Name: calling prohibited method
+Summary: This rule detects three types of redundant conditional operators:
+1. true expression and false expression are returning true/false or false/true respectively;
+2. true expression and false expression are the same constant;
+3. true expression and false expression are the same variable expression.
+They are usually introduced by mistake, and should be simplified.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#redundantconditionaloperator
 
 Severity: 1
 Category: OCLint
 
-missing abstract method implementation
+redundant if statement
 ----------
 
-Summary: Name: missing abstract method implementation
+Summary: This rule detects unnecessary if statements.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#redundantifstatement
 
 Severity: 1
 Category: OCLint
 
+redundant local variable
+----------
 
+Summary: This rule detects cases where a variable declaration is immediately followed by a return of that variable.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#redundantlocalvariable
+
+Severity: 1
+Category: OCLint
+
+redundant nil check
+----------
+
+Summary: C/C++-style null check in Objective-C like foo != nil && [foo bar] is redundant, since sending a message to a nil object in this case simply returns a false-y value.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#redundantnilcheck
+
+Severity: 1
+Category: OCLint
+
+unnecessary else statement
+----------
+
+Summary: When an if statement block ends with a return statement, or all branches in the if statement block end with return statements, then the else statement is unnecessary. The code in the else statement can be run without being in the block.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#unnecessaryelsestatement
+
+Severity: 1
+Category: OCLint
+
+unnecessary null check for dealloc
+----------
+
+Summary: char* p = 0; delete p; is valid. This rule locates unnecessary if (p) checks.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#unnecessarynullcheckfordealloc
+
+Severity: 1
+Category: OCLint
+
+useless parentheses
+----------
+
+Summary: This rule detects useless parentheses.
+http://oclint-docs.readthedocs.io/en/stable/rules/redundant.html#uselessparentheses
+
+Severity: 1
+Category: OCLint
+
+high cyclomatic complexity
+----------
+
+Summary: Cyclomatic complexity is determined by the number of linearly independent paths through a program’s source code. In other words, cyclomatic complexity of a method is measured by the number of decision points, like if, while, and for statements, plus one for the method entry.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#highcyclomaticcomplexity
+
+Severity: 2
+Category: OCLint
+
+long class
+----------
+
+Summary: Long class generally indicates that this class tries to do many things. Each class should do one thing and that one thing well.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#longclass
+
+Severity: 3
+Category: OCLint
+
+long line
+----------
+
+Summary: When the number of characters for one line of code is very high, it largely harms the readability. Break long lines of code into multiple lines.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#longline
+
+Severity: 3
+Category: OCLint
+
+long method
+----------
+
+Summary: Long method generally indicates that this method tries to do many things. Each method should do one thing and that one thing well.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#longmethod
+
+Severity: 3
+Category: OCLint
+
+high ncss method
+----------
+
+Summary: This rule counts number of lines for a method by counting Non Commenting Source Statements (NCSS). NCSS only takes actual statements into consideration, in other words, ignores empty statements, empty blocks, closing brackets or semicolons after closing brackets. Meanwhile, a statement that is broken into multiple lines contribute only one count.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#highncssmethod
+
+Severity: 3
+Category: OCLint
+
+deep nested block
+----------
+
+Summary: This rule indicates blocks nested more deeply than the upper limit.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#deepnestedblock
+
+Severity: 3
+Category: OCLint
+
+high npath complexity
+----------
+
+Summary: NPath complexity is determined by the number of execution paths through that method. Compared to cyclomatic complexity, NPath complexity has two outstanding characteristics: first, it distinguishes between different kinds of control flow structures; second, it takes the various type of acyclic paths in a flow graph into consideration.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#highnpathcomplexity
+
+Severity: 2
+Category: OCLint
+
+too many fields
+----------
+
+Summary: A class with too many fields indicates it does too many things and lacks proper abstraction. It can be redesigned to have fewer fields.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#toomanyfields
+
+Severity: 3
+Category: OCLint
+
+too many methods
+----------
+
+Summary: A class with too many methods indicates it does too many things and is hard to read and understand. It usually contains complicated code, and should be refactored.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#toomanymethods
+
+Severity: 3
+Category: OCLint
+
+too many parameters
+----------
+
+Summary: Methods with too many parameters are hard to understand and maintain, and are thirsty for refactorings, like Replace Parameter With method, Introduce Parameter Object, or Preserve Whole Object.
+http://oclint-docs.readthedocs.io/en/stable/rules/size.html#toomanyparameters
+
+Severity: 3
+Category: OCLint
+
+unused local variable
+----------
+
+Summary: This rule detects local variables that are declared, but not used
+http://oclint-docs.readthedocs.io/en/stable/rules/unused.html#unusedlocalvariable
+
+Severity: 0
+Category: OCLint
+
+unused method parameter
+----------
+
+Summary: This rule detects parameters that are not used in the method.
+http://oclint-docs.readthedocs.io/en/stable/rules/unused.html#unusedmethodparameter
+
+Severity: 0
+Category: OCLint
+
+compiler warning
+----------
+
+Summary: compiler warning
+
+Severity: 3
+Category: OCLint
+
+compiler error
+----------
+
+Summary: compiler error
+
+Severity: 4
+Category: OCLint

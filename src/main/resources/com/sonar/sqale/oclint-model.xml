@@ -288,13 +288,39 @@
                 </prop>
                 <prop>
                     <key>offset</key>
-                    <val>30</val>
-                    <txt>min</txt>
+                    <val>1</val>
+                    <txt>h</txt>
                 </prop>
             </chc>
             <chc>
                 <rule-repo>OCLint</rule-repo>
                 <rule-key>too few branches in switch statement</rule-key>
+                <prop>
+                    <key>remediationFunction</key>
+                    <txt>CONSTANT_ISSUE</txt>
+                </prop>
+                <prop>
+                    <key>offset</key>
+                    <val>10</val>
+                    <txt>min</txt>
+                </prop>
+            </chc>
+            <chc>
+                <rule-repo>OCLint</rule-repo>
+                <rule-key>avoid default arguments on virtual methods</rule-key>
+                <prop>
+                    <key>remediationFunction</key>
+                    <txt>CONSTANT_ISSUE</txt>
+                </prop>
+                <prop>
+                    <key>offset</key>
+                    <val>10</val>
+                    <txt>min</txt>
+                </prop>
+            </chc>
+            <chc>
+                <rule-repo>OCLint</rule-repo>
+                <rule-key>avoid private static members</rule-key>
                 <prop>
                     <key>remediationFunction</key>
                     <txt>CONSTANT_ISSUE</txt>
@@ -347,6 +373,19 @@
             <chc>
                 <rule-repo>OCLint</rule-repo>
                 <rule-key>ill-placed default label in switch statement</rule-key>
+                <prop>
+                    <key>remediationFunction</key>
+                    <txt>CONSTANT_ISSUE</txt>
+                </prop>
+                <prop>
+                    <key>offset</key>
+                    <val>10</val>
+                    <txt>min</txt>
+                </prop>
+            </chc>
+            <chc>
+                <rule-repo>OCLint</rule-repo>
+                <rule-key>destructor of virtual class</rule-key>
                 <prop>
                     <key>remediationFunction</key>
                     <txt>CONSTANT_ISSUE</txt>
@@ -474,7 +513,7 @@
                 </prop>
                 <prop>
                     <key>offset</key>
-                    <val>10</val>
+                    <val>30</val>
                     <txt>min</txt>
                 </prop>
             </chc>
@@ -881,6 +920,19 @@
             </chc>
             <chc>
                 <rule-repo>OCLint</rule-repo>
+                <rule-key>base class destructor should be virtual or protected</rule-key>
+                <prop>
+                    <key>remediationFunction</key>
+                    <txt>CONSTANT_ISSUE</txt>
+                </prop>
+                <prop>
+                    <key>offset</key>
+                    <val>30</val>
+                    <txt>min</txt>
+                </prop>
+            </chc>
+            <chc>
+                <rule-repo>OCLint</rule-repo>
                 <rule-key>missing default in switch statements</rule-key>
                 <prop>
                     <key>remediationFunction</key>
@@ -1020,6 +1072,32 @@
                     <key>offset</key>
                     <val>10</val>
                     <txt>min</txt>
+                </prop>
+            </chc>
+            <chc>
+                <rule-repo>OCLint</rule-repo>
+                <rule-key>compiler warning</rule-key>
+                <prop>
+                    <key>remediationFunction</key>
+                    <txt>CONSTANT_ISSUE</txt>
+                </prop>
+                <prop>
+                    <key>offset</key>
+                    <val>10</val>
+                    <txt>min</txt>
+                </prop>
+            </chc>
+            <chc>
+                <rule-repo>OCLint</rule-repo>
+                <rule-key>compiler error</rule-key>
+                <prop>
+                    <key>remediationFunction</key>
+                    <txt>CONSTANT_ISSUE</txt>
+                </prop>
+                <prop>
+                    <key>offset</key>
+                    <val>1</val>
+                    <txt>h</txt>
                 </prop>
             </chc>
         </chc>
