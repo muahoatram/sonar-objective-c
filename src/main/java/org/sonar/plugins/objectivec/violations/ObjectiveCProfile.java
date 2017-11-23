@@ -31,6 +31,8 @@ import org.sonar.plugins.objectivec.violations.fauxpas.FauxPasProfile;
 import org.sonar.plugins.objectivec.violations.fauxpas.FauxPasProfileImporter;
 import org.sonar.plugins.objectivec.violations.oclint.OCLintProfile;
 import org.sonar.plugins.objectivec.violations.oclint.OCLintProfileImporter;
+import org.sonar.plugins.objectivec.violations.ocstyle.OCStyleProfile;
+import org.sonar.plugins.objectivec.violations.ocstyle.OCStyleProfileImporter;
 
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -41,10 +43,14 @@ public class ObjectiveCProfile extends ProfileDefinition {
 
     private final OCLintProfileImporter ocLintProfileImporter;
     private final FauxPasProfileImporter fauxPasProfileImporter;
+    private final OCStyleProfileImporter ocStyleProfileImporter;
 
-    public ObjectiveCProfile(final OCLintProfileImporter ocLintProfileImporter, final FauxPasProfileImporter fauxPasProfileImporter) {
+    public ObjectiveCProfile(final OCLintProfileImporter ocLintProfileImporter,
+                             final FauxPasProfileImporter fauxPasProfileImporter,
+                             final OCStyleProfileImporter ocStyleProfileImporter) {
         this.ocLintProfileImporter = ocLintProfileImporter;
         this.fauxPasProfileImporter = fauxPasProfileImporter;
+        this.ocStyleProfileImporter = ocStyleProfileImporter;
     }
 
     @Override
@@ -70,6 +76,11 @@ public class ObjectiveCProfile extends ProfileDefinition {
                 profile.addActiveRule(rule);
             }
 
+            config = new InputStreamReader(getClass().getResourceAsStream(OCStyleProfile.PROFILE_PATH));
+            RulesProfile ocStyleRulesProfile = ocStyleProfileImporter.importProfile(config, messages);
+            for (ActiveRule rule : ocStyleRulesProfile.getActiveRules()) {
+                profile.addActiveRule(rule);
+            }
 
             return profile;
         } finally {

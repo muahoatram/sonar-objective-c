@@ -77,6 +77,11 @@
             <name>Mete Balci</name>
             <url>https://github.com/metebalci</url>
         </developer>
+        <developer>
+            <id>muahoatram</id>
+            <name>Danh Hung</name>
+            <url>https://github.com/muahoatram</url>
+        </developer>
     </developers>
     <scm>
         <connection>scm:git:git@github.com:Backelite/sonar-objective-c.git</connection>

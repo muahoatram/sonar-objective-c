@@ -1,0 +1,9 @@
+[
+    {
+        "category": "OCStyle",
+        "key": "code conventions",
+        "name": "code conventions",
+        "description": "Following coding conventions is highly recommended to help improve the readability of source code and make software maintenance easier.",
+        "severity": "MINOR"
+    }
+]

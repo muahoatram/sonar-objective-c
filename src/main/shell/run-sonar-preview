@@ -11,6 +11,7 @@ XCTOOL_CMD=xcodebuild
 SLATHER_CMD=slather
 XCPRETTY_CMD=xcpretty
 LIZARD_CMD=lizard
+OCSTYLE_CMD=ocstyle
 
 trap "echo 'Script interrupted by Ctrl+C'; stopProgress; exit 1" SIGHUP SIGINT SIGTERM
 
@@ -126,6 +127,7 @@ nflag=""
 oclint="on"
 fauxpas="on"
 lizard="on"
+ocstyle="on"
 while [ $# -gt 0 ]
 do
     case "$1" in
@@ -133,6 +135,7 @@ do
     -n) nflag=on;;
 	-nooclint) oclint="";;
     -nofauxpas) fauxpas="";;
+    -noocstyle) ocstyle="";;
 	--)	shift; break;;
 	-*)
         echo >&2 "Usage: $0 [-v]"
@@ -184,6 +187,8 @@ testScheme=''; readParameter testScheme 'sonar.objectivec.testScheme'
 excludedPathsFromCoverage=''; readParameter excludedPathsFromCoverage 'sonar.objectivec.excludedPathsFromCoverage'
 # Read coverage type
 coverageType=''; readParameter coverageType 'sonar.objectivec.coverageType'
+# Read build directory
+buildDir=''; readParameter buildDir 'sonar.objectivec.buildDir'
 # Branch base
 baseBranch=''; readParameter baseBranch 'sonar.scm.base_branch'
 
@@ -300,6 +305,13 @@ else
 		if [[ ! -z "$workspaceFile" ]]; then
 			slatherCmd+=( --workspace $workspaceFile)
 		fi
+		if [[ ! -z "$buildDir" ]]; then
+			slatherCmd+=( --build-directory $buildDir)
+			application=$(find "${buildDir}" -iname "${appScheme}.app" | grep 'CodeCoverage')
+			if [[ ! -z "$application" ]]; then
+				slatherCmd+=( --binary-file "${application}/${appScheme}")
+			fi
+		fi
 		slatherCmd+=( --scheme "$appScheme" $firstProject)
 
 		runCommand /dev/stdout "${slatherCmd[@]}"
@@ -354,7 +366,7 @@ if [ "$oclint" = "on" -a "$baseBranch" != "" ]; then
 			configCommandRulesFlag+=" -rc SHORT_VARIABLE_NAME=2"
 			configCommandRulesFlag+=" -rc LONG_METHOD=60"
 			configCommandRulesFlag+=" -rc LONG_LINE=148"
-                	configCommandRulesFlag+=" -rc TOO_MANY_METHODS=50"
+			configCommandRulesFlag+=" -rc TOO_MANY_METHODS=50"
 			configCommandRulesFlag+=" -max-priority-1 20"
 			configCommandRulesFlag+=" -max-priority-2 1500"
 			configCommandRulesFlag+=" -max-priority-3 15000"
@@ -435,6 +447,18 @@ if [ "$lizard" = "on" ]; then
   	fi
 else
  	echo 'Skipping Lizard (test purposes only!)'
+fi
+
+# OCStyle Code conventions
+if [ "$ocstyle" = "on" ]; then
+	if hash $OCSTYLE_CMD 2>/dev/null; then
+		echo -n 'Running OCStyle...'
+		$OCSTYLE_CMD -s "$srcDirs" -r json -o sonar-reports/ocstyle.json
+	else
+		echo 'Skipping OCStyle (not installed!)'
+	fi
+else
+	echo 'Skipping OCStyle (Disabled)'
 fi
 
 # SonarQube

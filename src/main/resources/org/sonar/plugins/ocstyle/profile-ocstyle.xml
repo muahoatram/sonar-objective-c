@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profile>
+  <name>OCStyle</name>
+  <language>objc</language>
+  <rules>
+    <rule>
+      <repositoryKey>OCStyle</repositoryKey>
+      <key>code conventions</key>
+    </rule>
+  </rules>
+</profile>

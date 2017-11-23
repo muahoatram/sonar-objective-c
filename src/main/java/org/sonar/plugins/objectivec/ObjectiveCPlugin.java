@@ -40,11 +40,16 @@ import org.sonar.plugins.objectivec.violations.fauxpas.FauxPasProfileImporter;
 import org.sonar.plugins.objectivec.violations.fauxpas.FauxPasRulesDefinition;
 import org.sonar.plugins.objectivec.violations.fauxpas.FauxPasSensor;
 import org.sonar.plugins.objectivec.violations.oclint.*;
+import org.sonar.plugins.objectivec.violations.ocstyle.OCStyleProfile;
+import org.sonar.plugins.objectivec.violations.ocstyle.OCStyleProfileImporter;
+import org.sonar.plugins.objectivec.violations.ocstyle.OCStyleRulesDefinition;
+import org.sonar.plugins.objectivec.violations.ocstyle.OCStyleSensor;
 
 @Properties({
         @Property(key = CoberturaSensor.REPORT_PATTERN_KEY, defaultValue = CoberturaSensor.DEFAULT_REPORT_PATTERN, name = "Path to unit test coverage report(s)", description = "Relative to projects' root. Ant patterns are accepted", global = false, project = true),
         @Property(key = OCLintSensor.REPORT_PATH_KEY, defaultValue = OCLintSensor.DEFAULT_REPORT_PATH, name = "Path to oclint pmd formatted report", description = "Relative to projects' root.", global = false, project = true),
         @Property(key = FauxPasSensor.REPORT_PATH_KEY, defaultValue = FauxPasSensor.DEFAULT_REPORT_PATH, name = "Path to fauxpas json formatted report", description = "Relative to projects' root.", global = false, project = true),
+        @Property(key = OCStyleSensor.REPORT_PATH_KEY, defaultValue = OCStyleSensor.DEFAULT_REPORT_PATH, name = "Path to ocstyle json formatted report", description = "Relative to projects' root.", global = false, project = true),
         @Property(key = LizardSensor.REPORT_PATH_KEY, defaultValue = LizardSensor.DEFAULT_REPORT_PATH, name = "Path to lizard report", description = "Relative to projects' root.", global = false, project = true)
 })
 public class ObjectiveCPlugin extends SonarPlugin {
@@ -68,6 +73,11 @@ public class ObjectiveCPlugin extends SonarPlugin {
                 FauxPasRulesDefinition.class,
                 FauxPasProfile.class,
                 FauxPasProfileImporter.class,
+
+                OCStyleSensor.class,
+                OCStyleRulesDefinition.class,
+                OCStyleProfile.class,
+                OCStyleProfileImporter.class,
 
                 LizardSensor.class
                 );
